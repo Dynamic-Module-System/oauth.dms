@@ -1,0 +1,48 @@
+@import url('//fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap');
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+#contenedor{
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  color: #000;
+}
+.cargando{
+  position: relative;
+  color: #ffffff;
+  margin-top: 2em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  top: -35px;
+  z-index: 1000;
+  text-align: center;
+  font-weight: bold;
+}
+
+.rueda {
+  border: 10px solid rgba(185, 22, 226, 0.3);
+  border-radius: 50%;
+  border-left-color: transparent;
+  width: 80px;
+  height: 80px;
+  animation: giro 1s linear infinite;
+}
+
+@keyframes giro {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#contenedor, #contenedor_transparente{
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+}
